@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <style>
+        p {
+            color: black;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+
+        }
+    </style>
+    <section>
+        <aside>
+            <br>
+            <a href="/map">
+                <img src="/static/slide1.png" alt="Interactive Map" style="float: left" width="500" height="450">
+            </a>
+        </aside>
+
+        <article>
+            <h3 style="color: black"><u>Interactive Map</u></h3>
+            <p>This website contains a lightweight and interactive map feature that can help you determine detailed and accurate COVID statistics of your region.<p>
+            <p>To use it simply head click on the Map heading on the nagivational bar to be greeted with a map having all of its provinces separated by a thick border.
+            The province you hover on is illuminated and a caption appears detailing which province is being hovered on for convenience. </p>
+            <p>After selecting your province, you will be guided to another page to select which region of the province you would like to see the statistics of. Simply
+            select your region of choice from the dropdown menu. Regions can range from being cities, areas or in some cases, the province itself depending on the
+            data available from the province.</p>
+            <p>Finally, you will be presented the statistics of your selected health region in a tabulated format showing only the critical data
+            for convenience and accessibility. Additionally, the statistics page and the region selection page sport options to return to the previous page,
+            allowing for seamless and quick navigation of the website.</p>
+            <br>
+        </article>
+    </section>
+    <br>
+    <br>
+        <section>
+            <aside>
+                <br>
+                <a href="/prevention">
+                    <img src="/static/slide2.png" alt="Prevention" style="float: right" width="400" height="400">
+                </a>
+            </aside>
+
+            <article>
+                <h3 style="color: black"><u>Preventive Measures</u></h3>
+                <p>This website additionally contains safety procedures for maintaining the highest possible safety amidst the pandemic. It includes 3 major
+                tips that you can follow and shines light on what to do if you think you may have COVID.</p>
+                <p>The tips cover basic essentials that aim to make sure you are protected in the event that you may need to step outside for any reason, ranging
+                from mandatory grocery shopping to gathering (as long as their purpose is essential)</p>
+                <p>The website also includes multiple images so that you can quickly understand the tips without having to read through
+                all the finer print. These are meant to serve a TL;DR purpose and are directly from the World Health Organization.
+                Moreover, the expandable sections include informative headers as well.</p>
+                <p>Finally, the data on the website has been provided by the World Health Organization, an organization striving to help reduce the impact of
+                COVID-19 in both, developed and underdeveloped countries.</p>
+                <br>
+            </article>
+        </section>
+    <br>
+    <br>
+        <section>
+            <aside>
+                <br>
+                <img src="/static/slide3.png" alt="Prevention" style="float: left; padding-right: 15px" width="200" height="200">
+            </aside>
+
+            <article  style="padding-left: 5px">
+                <h3 style="color: black"><u>About this Project</u></h3>
+                <p>This project was designed for CS50's Final Assignment. It includes elements of Flask, SQLite3, Python, JavaScript, HTML and CSS as demonstrated in the course.
+                Additionally, it includes the implementation of a global API from COVID-19 Canada Open Data Working Group to help spread awareness and proper information of a global
+                catastrophe taking place and health and safety tips recommended by the World Health Organization.</p>
+                <br>
+            </article>
+        </section>
+
+{% endblock %}
+
+{% block footer %}
+    CS50 Final Project
+{% endblock %}
