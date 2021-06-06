@@ -1,8 +1,9 @@
-// Define required constants
+// Define required constants and initialize express app
 const express = require("express");
-const app = express();
 const router = require("./routes/routes");
+const app = express();
 
+// Implement router and middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/", router);
