@@ -1,5 +1,4 @@
 // Import file containing all the information about the provinces and their health regions
-const provinces = require("../data/locations.json");
 const countries = require("../data/countries.json");
 
 // Get the name and code information from the imported file and return it in a JSON format
@@ -8,12 +7,11 @@ const map = (req, res) => {
 
     // Push the data into the array
     for (let i = 0; i < Object.values(countries["features"]).length; i++) {
-        // data.push({
-        //     name: Object.values(provinces)[i].name,
-        //     code: Object.values(provinces)[i].code,
-        // });
         data.push({
-            country: countries["features"][i]["properties"],
+            country: {
+                code: countries["features"][i]["properties"]["ISO_A3"],
+                name: countries["features"][i]["properties"]["ADMIN"],
+            },
         });
     }
 
