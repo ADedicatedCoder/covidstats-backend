@@ -2,7 +2,7 @@
 
 ### **Purpose**
 
-To serve as the backend for the application that will accurately and effectively get the statistics of the COVID-19 pandemic for all regions of Canada.
+To serve as the backend for the application that will accurately and effectively get the statistics of the COVID-19 pandemic for all countries.
 
 ### **Installation Instructions**
 
@@ -17,6 +17,6 @@ To serve as the backend for the application that will accurately and effectively
 
 ### **About**
 
-_Author:_ Mahin Kukreja
+_Author:_ Mahin Kukreja  
 _NodeJS version:_ v14.17.0 (LTS)  
 _npm version:_ 6.14.13

@@ -1,4 +1,4 @@
-// Import file containing all the information about the provinces and their health regions
+// Import file containing all the information about the countries
 const countries = require("../data/countries.json");
 
 // Get the name and code information from the imported file and return it in a JSON format
