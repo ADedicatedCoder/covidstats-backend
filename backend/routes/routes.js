@@ -13,8 +13,8 @@ const router = express.Router();
 router.get("/", home);
 router.get("/about", about);
 router.get("/map", map);
-router.get("/map/:province", regions);
-router.get("/map/:province/:hrcode", stats);
+// router.get("/map/:province", regions);
+router.get("/map/:country", stats);
 
 // Export the router
 module.exports = router;
