@@ -24,7 +24,6 @@ const stats = (req, res) => {
                     cases: statistics["cases"],
                     deaths: statistics["deaths"],
                     cured: statistics["recovered"],
-                    population: statistics["population"],
                 };
                 // Return the stats with a status code of 200 in a JSON format
                 return res.status(200).json({
