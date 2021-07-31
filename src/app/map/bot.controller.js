@@ -1,8 +1,9 @@
-const toISO = require("../data/countryToISO.json");
+const toISO3 = require("../data/countryToISO.json");
 const toCountry = require("../data/codes.json");
+const iso2ToCountry = require("../data/iso2ToCountry.json");
 const https = require("https");
 
-const ifCountry = (database, country, res) => {
+const ifCountry = (database, country) => {
     insertIntoURL = database[country.toString()];
     console.log(database[country.toString()]);
     const url = `https://disease.sh/v3/covid-19/countries/${insertIntoURL}?strict=true`;
@@ -12,11 +13,12 @@ const ifCountry = (database, country, res) => {
 const bot = (req, res) => {
     const country = req.body.country;
     let covidUrl = ``;
-    console.log(country);
-    if (toISO[req.body.country.toString()]) {
-        covidUrl = ifCountry(toISO, country, res);
-    } else if (toCountry[req.body.country.toString()]) {
-        covidUrl = ifCountry(toCountry, country, res);
+    if (toISO3[country.toString()]) {
+        covidUrl = ifCountry(toISO3, country);
+    } else if (toCountry[country.toString()]) {
+        covidUrl = ifCountry(toCountry, country);
+    } else if (iso2ToCountry[country.toString()]) {
+        covidUrl = ifCountry(iso2ToCountry, country);
     } else {
         return res.status(404).json({
             msg: "Country not found",
