@@ -1,11 +1,16 @@
 // Import file containing all the information about the countries and HTTPS module to make requests
 const codes = require("../data/codes.json");
+const secureSources = require("../data/secure.json");
 const https = require("https");
 
 // Check if the country or ISO3 code are valid and return statistics for the country in a JSON format
 const stats = (req, res) => {
     // Variables to hold request URL parameters
     const country = req.params.country;
+
+    if (secureSources.safe.includes(req.headers.host)) {
+        console.log("Being accessed from a trusted source");
+    }
 
     // If the country ISO3 code is valid, set the URL, send the request and return the data
     if (codes[country.toString()]) {
