@@ -1,3 +1,3 @@
 {
-    "safe": ["localhost:8080"]
+    "safe": ["localhost:8080", "covidstats-backend-staging.herokuapp.com"]
 }
