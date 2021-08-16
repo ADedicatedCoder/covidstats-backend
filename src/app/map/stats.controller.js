@@ -7,6 +7,7 @@ const https = require("https");
 const stats = (req, res) => {
     // Variables to hold request URL parameters
     const country = req.params.country;
+    console.log(req.headers.host);
 
     if (secureSources.safe.includes(req.headers.host)) {
         console.log("Being accessed from a trusted source");
